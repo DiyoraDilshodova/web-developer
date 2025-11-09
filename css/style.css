@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'modern';
+  font-family: "modern";
   src: url(/img/modern-font/modern.ttf);
 }
 @font-face {
@@ -10,14 +10,22 @@
 body {
   padding: 0;
   margin: 0;
+  padding-top: 70px;
 }
 
 header {
-  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 100;
+  background-color: rgb(201, 198, 198);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 15px 5px black;
+  box-sizing: border-box;
 }
 
 .left-buttons {
@@ -26,6 +34,7 @@ header {
 }
 
 .button1 {
+  color: white;
   cursor: pointer;
   border-radius: 10px;
   width: 50px;
@@ -38,7 +47,10 @@ header {
   
 }
 
-.button1 a {
+.button1:hover {
+  transform: scale(1.1);
+}
+a  {
   text-decoration: none;
   color: white;
 }
@@ -70,40 +82,83 @@ header {
   transform: scale(0.9);
 }
 
-
 .hero {
-  position: relative;
-  width: 100%;
-  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 100px;
+  background-color:  rgb(228, 228, 228);
 }
 
-
 .hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
+  position: relative;
+  width: 550px;
+  height: 520px;
+}
+
+.hero-img img {
+  /* position: absolute; */
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+/* Har bir rasmni turli joyga qo’yamiz */
+.hero-img img:nth-child(1) {
+  top: 100px;
+  left: 40px;
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+.hero-img img:nth-child(2) {
+  top: 60px;
+  left: 180px;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+.hero-img img:nth-child(3) {
+  top: 180px;
+  left: 80px;
+  transform: rotate(-6deg);
+  z-index: 3;
+}
+
+.hero-img img:nth-child(5) {
+  top: 120px;
+  left: 320px;
+  transform: rotate(12deg);
+  z-index: 5;
+}
+
+/* Hover effekti — tepaga chiqadi */
+.hero-img img:hover {
+  transform: scale(1.1);
+  z-index: 10;
 }
 
 .hero-text {
-  position: absolute; 
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  color: white;
-  text-align: center;
-  font-family: "rooney", sans-serif;
-  
+  width: 45%;
 }
 
 .hero-text h1 {
-  font-size: 70px;
-  margin-bottom: 10px;
-  text-shadow:  3px 3px 4px white ;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "rooney";
+  text-shadow: 2px 2px 2px black;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-decoration: underline 2px solid black;
 }
 
 .hero-text p {
   font-size: 28px;
-  margin: 5px 0;
+  line-height: 1.6;
+  font-family: "rooney";
+ 
 }
+
 
 
