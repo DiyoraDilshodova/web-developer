@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'modern';
+  src: url(/img/modern-font/modern.ttf);
+}
+@font-face {
+  font-family: "rooney";
+  src: url(/img/rooney-font/rooney.ttf);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button1 {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 50px;
+  padding: 10px;
+  margin: 2px;
+  background-color: #102837;
+  transition: all 0.3s;
+  border: none;
+  box-shadow: 0px 0px 40px -10px blue;
+  
+}
+
+.button1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.button1:active {
+  transform: scale(0.9);
+}
+
+.btn3 {
+  padding: 10px 20px;
+  background-color: rgb(5, 6, 45);
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0px 0px 20px 1px;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: normal;
+  display: inline-block;
+  font-family: 'moern';
+}
+
+/* .btn3:hover {
+  transform: scale(1.05);
+} */
+
+.btn3:active {
+  transform: scale(0.9);
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white;
+  text-align: center;
+  font-family: "rooney", sans-serif;
+  
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  text-shadow:  3px 3px 4px white ;
+}
+
+.hero-text p {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+
