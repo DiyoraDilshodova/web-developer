@@ -14,13 +14,14 @@ body {
 }
 
 header {
+  animation: fadeIn 1.2s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   z-index: 100;
   background-color: rgb(201, 198, 198);
-  padding: 10px 20px;
+  padding: 7px 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,13 +45,12 @@ header {
   transition: all 0.3s;
   border: none;
   box-shadow: 0px 0px 40px -10px blue;
-  
 }
 
 .button1:hover {
   transform: scale(1.1);
 }
-a  {
+a {
   text-decoration: none;
   color: white;
 }
@@ -59,35 +59,63 @@ a  {
   transform: scale(0.9);
 }
 
-.btn3 {
-  padding: 10px 20px;
-  background-color: rgb(5, 6, 45);
-  border: none;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0px 0px 20px 1px;
-  color: #ffffff;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s;
-  line-height: normal;
-  display: inline-block;
-  font-family: 'moern';
+
+.all{
+  width: 400px;
+ 
+}
+.darkmode {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+#toggle{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 32px;
+    width: 65px;
+    background-color: #15181f;
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+#toggle:after{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    top: 5px;
+    left: 7px;
+    border-radius: 50%;
 }
 
-/* .btn3:hover {
-  transform: scale(1.05);
-} */
-
-.btn3:active {
-  transform: scale(0.9);
+.dark-theme{
+  background-color: #15181f;
+  color: #e5e5e5;
 }
+.dark-theme #toggle{
+  background-color: #ffffff;
+}
+.dark-theme #toggle:after{
+  background-color: transparent;
+  box-shadow: 10px 10px #15181f;
+  top: -4px;
+  left: 30px;
+}
+
+
 
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px 100px;
-  background-color:  rgb(228, 228, 228);
+  background-color: rgb(228, 228, 228);
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-img {
@@ -97,16 +125,15 @@ a  {
 }
 
 .hero-img img {
-  /* position: absolute; */
+  
   width: 260px;
   height: 260px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-/* Har bir rasmni turli joyga qo’yamiz */
 .hero-img img:nth-child(1) {
   top: 100px;
   left: 40px;
@@ -144,10 +171,10 @@ a  {
 }
 
 .hero-text h1 {
-  font-size: 40px;
+  font-size: 37px;
   margin-bottom: 20px;
   font-family: "rooney";
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 2px black;
   font-style: italic;
   letter-spacing: 1px;
   text-decoration: underline 2px solid black;
@@ -157,8 +184,80 @@ a  {
   font-size: 28px;
   line-height: 1.6;
   font-family: "rooney";
- 
 }
 
 
 
+
+
+
+
+
+/* 🔹 Overlay (fon qatlam) */
+.overlay {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+  position: relative;
+}
+
+/* 🔹 Yarim shaffof qoraytiruvchi qatlam */
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* qoraytiruvchi fon */
+  z-index: 1;
+}
+
+/* 🔹 Matn konteyneri */
+.container {
+  position: relative;
+  z-index: 2; /* overlay qatlam ustida chiqadi */
+  max-width: 900px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* shaffof fon, blur uchun */
+  backdrop-filter: blur(15px); /* blur effekti */
+  -webkit-backdrop-filter: blur(15px); /* Safari uchun */
+  color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 🔹 Sarlavhalar va matn */
+.container h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(37, 31, 31);
+}
+
+
+
+.container p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+/* 🔹 Animatsiya */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* 🔹 Mobil moslashuv */
+@media (max-width: 600px) {
+  .container { padding: 25px; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  p { font-size: 0.95rem; }
+}
