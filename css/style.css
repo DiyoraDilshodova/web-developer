@@ -13,7 +13,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   padding-top: 20px;
   overflow-x: hidden;
   max-width: 100%;
@@ -62,14 +63,6 @@ header {
 }
 
 .hero {
-  /* background: linear-gradient(
-  350deg, 
-  #000000 0%,
-  #121212 25%,
-  #1E1E1E 50%,
-  #2A2A2A 75%,
-  #ffffff 100%
-); */
   position: relative;
   width: 100%;
   height: 100vh;
@@ -81,69 +74,25 @@ header {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-.hero-img {
-  position: relative;
-  width: 550px;
-  height: 520px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.hero-img img {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 5px 10px white;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-}
-
-.hero-img img:nth-child(1) {
-  top: 100px;
-  left: 40px;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-.hero-img img:nth-child(2) {
-  top: 60px;
-  left: 180px;
-  transform: rotate(5deg);
-  z-index: 2;
-}
-.hero-img img:nth-child(3) {
-  top: 180px;
-  left: 80px;
-  transform: rotate(-6deg);
-  z-index: 3;
-}
-
-.hero-img img:nth-child(5) {
-  top: 120px;
-  left: 320px;
-  transform: rotate(12deg);
-  z-index: 5;
-}
-
-/* Hover effekti — tepaga chiqadi */
-.hero-img img:hover {
-  transform: scale(1.1);
-  z-index: 10;
-}
-
 .hero-text {
-  width: 45%;
+  
+  text-align: center;
+  width: 100vw;
+  height: auto;
   position: relative;
   z-index: 2;
 }
 
 .hero-text h1 {
+  font-size: 40px;
+  margin: 0;
   color: #ffffff;
-  font-size: 37px;
+  font-size: 40px;
   margin-bottom: 20px;
   font-family: "rooney";
   text-shadow: 1px 1px 2px black;
   font-style: italic;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-decoration: underline 2px solid white;
 
   /* ANIMATSIYA UCHUN KERAK BO'LGANLAR */
@@ -183,63 +132,12 @@ header {
 }
 
 .hero-text p {
+  margin: 0;
   color: white;
-  font-size: 28px;
-  line-height: 1.6;
-  font-family: "rooney";
-}
-
-/* 🔹 Overlay (fon qatlam) */
-.overlay {
-  background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c")
-    no-repeat center center/cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 10px;
-  position: relative;
-}
-
-/* 🔹 Yarim shaffof qoraytiruvchi qatlam */
-.overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* qoraytiruvchi fon */
-  z-index: 1;
-}
-
-/* 🔹 Matn konteyneri */
-.container {
-  position: relative;
-  z-index: 2; /* overlay qatlam ustida chiqadi */
-  max-width: 900px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 40px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* shaffof fon, blur uchun */
-  backdrop-filter: blur(15px); /* blur effekti */
-  -webkit-backdrop-filter: blur(15px); /* Safari uchun */
-  color: #fff;
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-/* 🔹 Sarlavhalar va matn */
-.container h1 {
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: rgb(37, 31, 31);
-}
-
-.container p {
-  font-size: 1.2rem;
-  margin: 15px 0;
-  text-align: justify;
+  font-size: 38px;
+  font-weight: lighter;
+  line-height: 1.2;
+  font-family: "modern";
 }
 
 /* 🔹 Animatsiya */
@@ -276,4 +174,90 @@ header {
   width: 100vw;
   height: 100vh;
   z-index: 1;
+}
+.overlay {
+  position: relative;
+  background: url(/img/background1.jpg);
+  background-size: cover;
+}
+
+.overlay h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Kaushan Script";
+  color: white;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Liquid Glass Card effektini container1 va container2 ga qo'llash */
+.container1,
+.container2 {
+  gap: 1000px;
+  padding: 20px;
+  position: relative;
+  border-radius: 28px;
+  isolation: isolate;
+  overflow: hidden; /* filtr to'g'ri ishlashi uchun */
+  box-shadow: 0px 6px 21px 8px rgba(73, 72, 72, 0.2);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1); /* shaffof fon */
+}
+
+/* Tint va inner shadow */
+.container1::before,
+.container2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 28px;
+  box-shadow: inset 0 0 12px -2px rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0);
+  pointer-events: none;
+}
+
+/* Backdrop blur va distortion */
+.container1::after,
+.container2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 28px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+  isolation: isolate;
+  pointer-events: none;
+}
+
+/* Text va kontentni oldingi qatlamda saqlash */
+.container1 > *,
+.container2 > * {
+  position: relative;
+  z-index: 10;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+  font-family: "rooney";
+  font-weight: lighter;
+  font-size: 25px;
+  color: rgb(230, 218, 193);
+}
+
+.container p {
+  line-height: 1.6;
+  font-family: "Pangolin";
+  font-size: 20px;
+  color: rgb(161, 161, 161);
 }

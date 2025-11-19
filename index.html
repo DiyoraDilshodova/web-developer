@@ -17,57 +17,100 @@
 
     <section class="hero">
       <div id="your-element-selector"></div>
-      <div class="hero-img">
-        <img src="/img/image1.jpg" alt="Image 1" />
-        <img src="/img/image2.jpg" alt="Image 2" />
-        <img src="/img/image3.jpg" alt="Image 3" />
-        <img src="/img/image5.jpg" alt="Image 5" />
-      </div>
+     
       <div class="hero-text">
         <h1 class="animate">Who is WEB DEVELOPER?</h1>
         <p class="animate">Let’s find out who the author is</p>
         <p class="animate">
-          Don’t look elsewhere, no one can understand it as well as I do
+          Don’t look elsewhere, no one can understand it as well as I do!
         </p>
       </div>
     </section>
 
     <section class="overlay">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pangolin&display=swap"
+        rel="stylesheet"
+      />
+      <svg width="0" height="0" style="position: absolute;">
+        <defs>
+          <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence 
+              type="fractalNoise" 
+              baseFrequency="0.025 0.025"
+              numOctaves="2" 
+              seed="92" 
+              result="noise" 
+            />
+            <feGaussianBlur 
+              in="noise" 
+              stdDeviation="2" 
+              result="blurred" 
+            />
+            <feDisplacementMap 
+              in="SourceGraphic" 
+              in2="blurred" 
+              scale="65"
+              xChannelSelector="R" 
+              yChannelSelector="G" 
+            />
+          </filter>
+        </defs>
+      </svg>
+      
       <div class="container">
         <h1>“Okay, let’s read about who a web developer is?”</h1>
-        <p>
-          A web developer is a specialist who creates websites and web
-          applications on the internet. They build the structure of the pages
-          that users see (HTML), design their appearance (CSS), and add
-          interactivity and movement using (JavaScript). They also make sure the
-          website runs fast, stores data correctly, and that everything works
-          together smoothly
-        </p>
-
-        <p>
-          A web developer builds and maintains websites and web applications.
-          They craft the page structure with HTML, design the look with CSS, and
-          add interactivity using JavaScript. They also make sure the site
-          performs well, stores data reliably, and that all parts work together
-          seamlessly.
-        </p>
-
-        <p>
-          The history of web development began in the 1990s. In 1991, Tim
-          Berners-Lee created the first website — this was the very first step
-          in the history of the internet. At that time, websites consisted only
-          of text. Later, the programming languages HTML (structure), CSS
-          (styling), and JavaScript (interactivity) were developed.
-        </p>
-
-        <p>
-          By the 2000s, the internet had rapidly developed, websites became more
-          complex, and the web developer profession became highly in demand.
-          Today, web developers are among the most essential and sought-after
-          specialists in the world.
-        </p>
+        <div class="container1">
+          <h2>History of Web Development:</h2>
+          <p>
+            Web development started in <u>1991</u> when Tim Berners-Lee created the
+            first website, marking the beginning of the World Wide Web. Early
+            websites were simple and text-based. Later, <u>HTML, CSS,</u> and
+            <u>JavaScript</u> were developed, allowing web pages to include styles,
+            layouts, and interactive features. As the internet grew during the
+            2000s, websites became more complex, and the role of web developers
+            became increasingly important. Today, web developers are essential
+            professionals who build the backbone of the modern internet.
+          </p>
+        </div>
+        <div class="container2">
+          <h2>Who are they and what do they do?</h2>
+          <p>
+            A web developer is a skilled professional who designs, builds, and
+            maintains websites and web applications on the internet. They are
+            responsible for creating the structure of web pages using HTML,
+            styling their appearance with CSS, and adding interactivity and
+            dynamic features with JavaScript. Web developers also ensure that
+            websites function smoothly, load quickly, store data correctly, and
+            provide a user-friendly experience. In addition to coding, web
+            developers often work closely with designers, content creators, and
+            other specialists to make sure the website looks good, is easy to
+            navigate, and meets the needs of users. Some web developers
+            specialize in the <u>front-end</u> (what users see),<u> back-end</u> (server-side
+            functionality), or <u>full-stack</u> (both front-end and back-end)
+            development. They also troubleshoot problems, update websites, and
+            implement security measures to protect data.
+          </p>
+        </div>
       </div>
     </section>
+
+    <section class="types">
+      <h1>Types of Web Developers(Main types)</h1>
+      <div>
+        <h1>1.Fronted Developer</h1>
+        <p></p>
+      </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="script.js"></script>
