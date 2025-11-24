@@ -365,10 +365,21 @@ ol li::marker {
   box-shadow: 3px 3px 5px 5px blue;
 }
 
+.types-image {
+  margin-top: 20px;
+}
+
+.types-image h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 10px;
+}
 
 .types-image img {
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   margin: 5px;
 }
 
