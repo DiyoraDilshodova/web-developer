@@ -17,7 +17,7 @@
 
     <section class="hero">
       <div id="your-element-selector"></div>
-     
+
       <div class="hero-text">
         <h1 class="animate">Who is WEB DEVELOPER?</h1>
         <p class="animate">Let’s find out who the author is</p>
@@ -40,45 +40,48 @@
         href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pangolin&display=swap"
         rel="stylesheet"
       />
-      <svg width="0" height="0" style="position: absolute;">
+      <svg width="0" height="0" style="position: absolute">
         <defs>
-          <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
-            <feTurbulence 
-              type="fractalNoise" 
+          <filter
+            id="glass-distortion"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+          >
+            <feTurbulence
+              type="fractalNoise"
               baseFrequency="0.025 0.025"
-              numOctaves="2" 
-              seed="92" 
-              result="noise" 
+              numOctaves="2"
+              seed="92"
+              result="noise"
             />
-            <feGaussianBlur 
-              in="noise" 
-              stdDeviation="2" 
-              result="blurred" 
-            />
-            <feDisplacementMap 
-              in="SourceGraphic" 
-              in2="blurred" 
+            <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="blurred"
               scale="65"
-              xChannelSelector="R" 
-              yChannelSelector="G" 
+              xChannelSelector="R"
+              yChannelSelector="G"
             />
           </filter>
         </defs>
       </svg>
-      
+
       <div class="container">
         <h1>“Okay, let’s read about who a web developer is?”</h1>
         <div class="container1">
           <h2>History of Web Development:</h2>
           <p>
-            Web development started in <u>1991</u> when Tim Berners-Lee created the
-            first website, marking the beginning of the World Wide Web. Early
-            websites were simple and text-based. Later, <u>HTML, CSS,</u> and
-            <u>JavaScript</u> were developed, allowing web pages to include styles,
-            layouts, and interactive features. As the internet grew during the
-            2000s, websites became more complex, and the role of web developers
-            became increasingly important. Today, web developers are essential
-            professionals who build the backbone of the modern internet.
+            Web development started in <u>1991</u> when Tim Berners-Lee created
+            the first website, marking the beginning of the World Wide Web.
+            Early websites were simple and text-based. Later,
+            <u>HTML, CSS,</u> and <u>JavaScript</u> were developed, allowing web
+            pages to include styles, layouts, and interactive features. As the
+            internet grew during the 2000s, websites became more complex, and
+            the role of web developers became increasingly important. Today, web
+            developers are essential professionals who build the backbone of the
+            modern internet.
           </p>
         </div>
         <div class="container2">
@@ -94,21 +97,95 @@
             developers often work closely with designers, content creators, and
             other specialists to make sure the website looks good, is easy to
             navigate, and meets the needs of users. Some web developers
-            specialize in the <u>front-end</u> (what users see),<u> back-end</u> (server-side
-            functionality), or <u>full-stack</u> (both front-end and back-end)
-            development. They also troubleshoot problems, update websites, and
-            implement security measures to protect data.
+            specialize in the <u>front-end</u> (what users see),<u> back-end</u>
+            (server-side functionality), or <u>full-stack</u> (both front-end
+            and back-end) development. They also troubleshoot problems, update
+            websites, and implement security measures to protect data.
           </p>
         </div>
       </div>
     </section>
 
     <section class="types">
-      
-      <h1>Types of Web Developers(Main types)</h1>
-      <div class="types-text">
-        <h1>1.Fronted Developer</h1>
-        <p></p>
+      <h1 class="types-heading">Types of Web Developers(Main types)</h1>
+      <h1>1.Fronted Developer</h1>
+      <div class="type-container">
+        <div class="types-text">
+          <h2>
+            A Frontend Developer is a programmer who builds the visual and
+            interactive parts of a website or web application — the part users
+            see and interact with.
+          </h2>
+          <div class="types-list">
+            <ol class="types-list-one">
+              <h3><span>1</span> <span>🛠</span> Main Technologies:</h3>
+              <li>HTML – structure of the web page;</li>
+              <li>CSS – styling and layout;</li>
+              <li>JavaScript – interactivity and dynamic behavior;</li>
+              <li>Frameworks/Libraries: React, Vue.js, Angular, Bootstrap;</li>
+              <li>Tools: Git/GitHub, Figma, Webpack, NPM.</li>
+            </ol>
+            <ol class="types-list-two">
+              <h3><span>2</span> 📌Responsibilities:</h3>
+              <li>Converting UI/UX design into functional web pages;</li>
+              <li>Ensuring websites are responsive across devices;</li>
+              <li>Creating interactive features and animations;</li>
+              <li>Communicating with backend developers via APIs;</li>
+              <li>Improving performance and user experience.</li>
+            </ol>
+            <ol class="types-list-three">
+              <h3><span>3</span> ✔ Skills Needed:</h3>
+              <li>Strong understanding of HTML, CSS, JS;</li>
+              <li>Knowledge of responsive design;</li>
+              <li>Familiar with frontend frameworks;</li>
+              <li>Problem-solving and clean coding.</li>
+              <li>
+                Accessibility (a11y) awareness – ensuring websites are usable
+                for all users, including people with disabilities.
+              </li>
+              <li>
+                UI/UX collaboration – working effectively with designers to
+                improve user experience.
+              </li>
+              
+
+             
+            </ol>
+          </div>
+        </div>
+
+        <div class="types-image">
+          <h1>Main programming languages</h1>
+          <div>
+            <img src="/img/html.jpeg" alt="" />
+            <p>
+              HTML (HyperText Markup Language) is the main markup language used
+              to create web pages. It allows you to add text, images, links,
+              lists, tables, and other elements to a webpage. HTML is the
+              foundation of web development. Anyone who wants to become a
+              frontend developer must first learn HTML.
+            </p>
+          </div>
+          <div>
+            <img src="/img/css.jpg" alt="" />
+            <p>
+              CSS (Cascading Style Sheets) is a language used to style web
+              pages. It allows you to add colors, fonts, backgrounds, sizes,
+              layouts, and animations. If HTML is the skeleton of a webpage, CSS
+              creates its appearance and design.
+            </p>
+          </div>
+          <div>
+            <img src="/img/script.jpg" alt="" />
+            <p>
+              JavaScript (JS) is a programming language that adds interactivity
+              to web pages. It allows you to work with buttons, forms,
+              animations, and dynamically change page elements. If HTML is the
+              skeleton of a webpage and CSS is its appearance, JavaScript brings
+              the page to life
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1,10 +1,18 @@
 @font-face {
   font-family: "modern";
-  src: url(/img/modern-font/modern.ttf);
+  src: url(/fonts/modern-font/modern.ttf);
 }
 @font-face {
   font-family: "rooney";
-  src: url(/img/rooney-font/rooney.ttf);
+  src: url(/fonts/rooney-font/rooney.ttf);
+}
+@font-face {
+  font-family: "telma";
+  src: url(/fonts/telma-font/Telma_Complete/Fonts/TTF/Telma-Variable.ttf);
+}
+@font-face {
+  font-family: "chillax";
+  src: url(/fonts/chillax/Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf);
 }
 
 * {
@@ -75,7 +83,6 @@ header {
 }
 
 .hero-text {
-  
   text-align: center;
   width: 100vw;
   height: auto;
@@ -177,7 +184,7 @@ header {
 }
 .overlay {
   position: relative;
-  background: url(/img/background1.jpg);
+  background: url(/img/section\ bg.jpg);
   background-size: cover;
 }
 
@@ -209,6 +216,11 @@ header {
   box-shadow: 0px 6px 21px 8px rgba(73, 72, 72, 0.2);
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1); /* shaffof fon */
+}
+
+.overlay h2:hover,
+p:hover {
+  cursor: text;
 }
 
 /* Tint va inner shadow */
@@ -262,3 +274,109 @@ header {
   color: rgb(161, 161, 161);
 }
 
+.types {
+  position: relative;
+  background-image: url(/img/section\ bg1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vw;
+  color: white;
+  padding: 20px;
+}
+
+.types-heading {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "telma";
+  text-align: center;
+}
+
+.types h1:nth-child(2) {
+  font-family: "chillax";
+  letter-spacing: 1px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.types-text h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+.types-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.types-list-one,
+.types-list-two {
+  flex: 1;
+  width: 100%;
+}
+
+.types-list-three {
+  width: 100%;
+}
+
+.types-list h3 span:nth-child(1) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #b9cfe9;
+  color: black;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.types-list h3 {
+  margin-bottom: 8px;
+  font-style: oblique;
+  color: rgb(102, 102, 218);
+}
+
+.types-list li {
+  gap: 15px;
+  color: lightblue;
+}
+
+ol li::marker {
+  color: #fff;
+}
+.types-list-one,
+.types-list-two,
+.types-list-three {
+  line-height: 1.4em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid #fff;
+  padding: 15px 45px;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: 3px 3px 5px 5px blue;
+}
+
+
+.types-image img {
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+}
+
+.types-image div,
+img {
+  display: flex;
+}
+
+.types-image {
+  padding: 5px;
+}
