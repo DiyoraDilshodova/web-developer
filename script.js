@@ -9,4 +9,6 @@ VANTA.NET({
   scaleMobile: 1.00,
   color: 0x00ffff,       // chiziq rangi
   backgroundColor: 0x000000 // fon rangi
+  
 });
+
