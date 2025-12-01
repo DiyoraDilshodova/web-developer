@@ -283,7 +283,7 @@ p:hover {
   width: 100%;
   height: 100%;
   color: white;
-  padding: 20px;
+  padding: 30px;
 }
 
 .types-heading {
@@ -293,14 +293,16 @@ p:hover {
   text-align: center;
 }
 
-.types h1:nth-child(2) {
+.type-dev {
   font-family: "chillax";
   letter-spacing: 1px;
   font-size: 35px;
   text-align: center;
+  color: white;
 }
 
 .types-text h2 {
+  color: white;
   margin-bottom: 10px;
   font-size: 25px;
   font-weight: 400;
@@ -316,13 +318,13 @@ p:hover {
   height: auto;
 }
 
-.types-list-one,
-.types-list-two {
+.types-list-one, .backend-list-one,
+.types-list-two, .backend-list-two {
   flex: 1;
   width: 100%;
 }
 
-.types-list-three {
+.types-list-three, .backend-list-three {
   width: 100%;
 }
 
@@ -376,6 +378,7 @@ ol li::marker {
   font-weight: 400;
   font-style: italic;
   margin-bottom: 10px;
+  color: white;
 }
 
 .types-language .intro,
@@ -448,15 +451,15 @@ dfn {
 }
 
 .intro.html:hover {
-  box-shadow: px 1px 10px 1px rgb(241, 140, 57);
+  box-shadow: 5px 1px 10px 1px rgb(241, 140, 57);
 }
 
 .intro.css:hover {
-  box-shadow: 5px 5px 10px 1px rgb(41, 77, 238);
+  box-shadow: 5px 1px 10px 1px rgb(41, 77, 238);
 }
 
 .intro.js:hover {
-  box-shadow: 5px 5px 10px 1px rgb(223, 241, 57);
+  box-shadow: 5px 1px 10px 1px rgb(223, 241, 57);
 }
 
 .intro:hover .types-language {
@@ -483,13 +486,140 @@ dfn {
   font-size: 30px;
   font-weight: 400;
   font-style: italic;
-  margin-bottom: 10px;
+  color: white;
+}
+
+.freamworks {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px;
 }
 
 .freamworks-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  animation: scroll 18s linear infinite;
+  white-space: nowrap;
+}
+
+.freamworks-img img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* Hoverda kattaradi */
+.freamworks-img img:hover {
+  transform: scale(1.15);
+}
+
+/* Scroll animatsiyasi */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.framework-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px 0;
+}
+
+.card {
+  background: #0f1320;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 22px;
+  border-radius: 14px;
+  color: #e9ecf5;
+  transition: 0.3s;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #7f5bd5;
+  font-size: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cdd2e3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.backend-type {
+  background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
+  padding: 30px;
+}
+
+.backend-list-one,
+.backend-list-two,
+.backend-list-three {
+
+  line-height: 1.4em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid #fff;
+  padding: 15px 45px;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: 3px 3px 5px 5px gray; 
+}
+
+.backend-list {
   display: flex;
 }
-.freamworks-img img {
-  width: 100%;
-  height: auto;
+.types-list h3 {
+  color: #dadada;
+}
+
+.types-list li {
+  color: #e9ecf5;
+}
+
+.intro.python:hover {
+  box-shadow: 
+  5px 1px 10px 1px rgb(223, 241, 57),
+  -5px -4px 10px 1px rgb(34, 34, 223) ;
+}
+.intro.java:hover {
+  box-shadow: 
+  5px 1px 10px 1px rgb(240, 40, 40),
+  -5px -4px 10px 1px rgb(50, 168, 247) ;
+}
+.intro.php:hover {
+  box-shadow: 
+  5px 1px 10px 1px rgb(46, 183, 247),
+  -5px -4px 10px 1px rgb(24, 81, 202) ;
+}
+
+.backend-img img {
+  height: 100%;
+  
 }
