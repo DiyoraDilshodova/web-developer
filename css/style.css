@@ -498,6 +498,7 @@ dfn {
 
 .freamworks-img {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -508,7 +509,7 @@ dfn {
   height: 100%;
   display: flex;
   gap: 40px;
-  animation: scroll 18s linear infinite;
+  animation: scroll 22s linear 1s infinite alternate;
   white-space: nowrap;
 }
 
@@ -531,7 +532,7 @@ dfn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-153%);
   }
 }
 
@@ -619,7 +620,56 @@ dfn {
   -5px -4px 10px 1px rgb(24, 81, 202) ;
 }
 
+.backend-img {
+  animation: scroll 30s linear 1s infinite alternate;
+}
 .backend-img img {
   height: 100%;
   
+}
+
+.backend-img img:nth-child(8) {
+  width: auto;
+  height: 200px;  
+}
+
+.fullstack {
+  color: white;
+  font-size: 20px;
+}
+
+.other-development {
+  background: #2c2c2c; /* toq qorong'i fon */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.other-development h1 {
+  text-align: center;
+  color: #1e90ff;
+}
+
+.other-development h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.other-development p {
+  line-height: 1.6;
+}
+
+.other-development ul {
+  padding-left: 20px;
+}
+
+.other-development li {
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: #1e90ff;
+  font-weight: bold;
 }
