@@ -318,13 +318,16 @@ p:hover {
   height: auto;
 }
 
-.types-list-one, .backend-list-one,
-.types-list-two, .backend-list-two {
+.types-list-one,
+.backend-list-one,
+.types-list-two,
+.backend-list-two {
   flex: 1;
   width: 100%;
 }
 
-.types-list-three, .backend-list-three {
+.types-list-three,
+.backend-list-three {
   width: 100%;
 }
 
@@ -582,7 +585,6 @@ dfn {
 .backend-list-one,
 .backend-list-two,
 .backend-list-three {
-
   line-height: 1.4em;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -590,7 +592,7 @@ dfn {
   padding: 15px 45px;
   border-radius: 20px;
   backdrop-filter: blur(30px);
-  box-shadow: 3px 3px 5px 5px gray; 
+  box-shadow: 3px 3px 5px 5px gray;
 }
 
 .backend-list {
@@ -605,19 +607,16 @@ dfn {
 }
 
 .intro.python:hover {
-  box-shadow: 
-  5px 1px 10px 1px rgb(223, 241, 57),
-  -5px -4px 10px 1px rgb(34, 34, 223) ;
+  box-shadow: 5px 1px 10px 1px rgb(223, 241, 57),
+    -5px -4px 10px 1px rgb(34, 34, 223);
 }
 .intro.java:hover {
-  box-shadow: 
-  5px 1px 10px 1px rgb(240, 40, 40),
-  -5px -4px 10px 1px rgb(50, 168, 247) ;
+  box-shadow: 5px 1px 10px 1px rgb(240, 40, 40),
+    -5px -4px 10px 1px rgb(50, 168, 247);
 }
 .intro.php:hover {
-  box-shadow: 
-  5px 1px 10px 1px rgb(46, 183, 247),
-  -5px -4px 10px 1px rgb(24, 81, 202) ;
+  box-shadow: 5px 1px 10px 1px rgb(46, 183, 247),
+    -5px -4px 10px 1px rgb(24, 81, 202);
 }
 
 .backend-img {
@@ -625,12 +624,11 @@ dfn {
 }
 .backend-img img {
   height: 100%;
-  
 }
 
 .backend-img img:nth-child(8) {
   width: auto;
-  height: 200px;  
+  height: 200px;
 }
 
 .fullstack {
@@ -638,31 +636,45 @@ dfn {
   font-size: 20px;
 }
 
+.other {
+ background-color: #0f1320;
+ 
+ 
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .other-development {
-  background: #2c2c2c; /* toq qorong'i fon */
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  background: #3b3b3b; /* toq qorong'i fon */
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 1000px;
+  background-image: url(/img/12.jpg);
+  box-shadow: 0 8px 25px rgba(5, 13, 87, 0.5);
 }
 
 .other-development h1 {
   text-align: center;
-  color: #1e90ff;
+  color: #52a8ff;
 }
 
 .other-development h2 {
-  color: #333;
+  color: #adadad;
   margin-top: 20px;
+  font-size: 30px;
 }
 
 .other-development p {
   line-height: 1.6;
+  font-size: 20px;
+  color: #cdd2e3;
 }
 
 .other-development ul {
   padding-left: 20px;
+  color: #b9cfe9;
 }
 
 .other-development li {
@@ -670,6 +682,20 @@ dfn {
 }
 
 .highlight {
-  color: #1e90ff;
+  color: #0462c0;
   font-weight: bold;
 }
+
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
