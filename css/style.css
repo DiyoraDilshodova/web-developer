@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: var(--font-family-heading);
 }
 
 :root {
@@ -32,17 +33,34 @@
 }
 
 header {
-  padding: 30px;
+  padding: 20px;
   background-color: rgb(37, 37, 37);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 70px;
+  height: 60px;
+  /* Animated Gradient Background */
+
+  background: linear-gradient(90deg, #000000, #434343, #1a1a1a, #2d2d2d);
+  background-size: 350% 350%;
+  animation: gradient-animation 16s ease normal infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header img {
   width: auto;
-  height: 90px;
+  height: 80px;
   transition: all 1s;
 }
 
@@ -85,4 +103,188 @@ li {
   background: #0ea472;
   box-shadow: var(--accent-color);
   transform: translateY(-10px);
+}
+
+.frst-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+  height: 100vh;
+  animation: animateBg 3s linear infinite;
+  background-image: linear-gradient(
+    0deg,
+    #246655,
+    #363030,
+    #3734c5,
+    #246655,
+    #363030
+  );
+  background-size: 100% 400%;
+}
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.first-section-text img:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  color: #0ea472;
+}
+
+.first-section-text button:nth-child(1) {
+  border-radius: 50px;
+  padding: 4px 10px;
+  background-color: #1a1a1a;
+  border: 2px solid #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.css-img {
+  z-index: 2;
+  width: 65px;
+  height: 65px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 3px solid #3b82f6;
+  transition: 1s ease-in;
+}
+
+.js-img {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  border: 3px solid #fbbf24;
+  transition: 1s ease-in;
+}
+
+.css-img:hover,
+.js-img:hover {
+  transform: scale(1.1);
+}
+.fst-section-img {
+  padding: 10px;
+  position: relative;
+  width: 600px; 
+  height: 400px;
+}
+
+.main-img {
+  z-index: 1;
+  border-radius: 10px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  animation: floatDown 5s ease-in-out infinite alternate;
+}
+
+.main-img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+.first-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.first-section-text h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.first-section-text h1 span {
+  background-clip: text;
+  color: transparent;
+  animation: animateBg 2s linear infinite;
+  background-image: linear-gradient(
+    0deg,
+    #3d9680,
+    #8f6868,
+    #221eee,
+    #144438,
+    #7a7979
+  );
+  background-size: 100% 400%;
+}
+
+.btn-start {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0;
+}
+
+.first-section-text p {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 25px;
+}
+
+.first-section-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.fst-section-logo-checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.second-section {
+  padding: 30px;
+}
+
+.second-section-text {
+  text-align: center;
+}
+
+.second-section-text img {
+  width: 20px;
+  height: 20px;
+}
+
+.second-section-text button {
+  border-radius: 50px;
+  background-color: #1f2937;
+  color: white;
+  border: 2px solid blue;
+  width: fit-content ;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+.second-section-text h1 span {
+  color: #0ea472;
 }
