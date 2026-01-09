@@ -2,13 +2,10 @@
   padding: 0;
   margin: 0;
   font-family: "regular";
+  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html, body {
   overflow-x: hidden;
 }
 
@@ -60,7 +57,7 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding: 50px;
   background-color: rgb(37, 37, 37);
   display: flex;
   justify-content: space-around;
@@ -138,8 +135,6 @@ li {
   align-items: center;
   width: fit-content;
 }
-
-
 
 .css-img {
   z-index: 2;
@@ -336,8 +331,7 @@ h1 {
   .second-section {
     min-height: 180vh;
   }
-
-} 
+}
 .second-section-box {
   padding: 20px;
   border: 1px solid #484949;
@@ -476,7 +470,7 @@ h1 {
   display: flex;
   border: 1px solid rgb(61, 61, 61);
   border-radius: 20px;
-  padding: 35px; 
+  padding: 35px;
   background-color: #121212;
   gap: 100px;
   transition: 1s ease;
@@ -629,7 +623,7 @@ h1 {
     display: none;
   }
   .third-section-box {
-      border: 1px solid #0ea472;
+    border: 1px solid #0ea472;
   }
   .third-section-box:hover {
     transform: none;
@@ -637,17 +631,16 @@ h1 {
   .third-section-box:hover .third-section-img {
     transform: none;
   }
-  
+
   .third-section-box:hover .btn img {
     transform: none;
   }
-  
+
   .third-section-box:hover .btn button {
     width: auto;
     transition: none;
   }
 }
-
 
 /* the fourth section */
 .the-fourth-section {
@@ -656,10 +649,14 @@ h1 {
   gap: 100px;
   background-color: #000000;
   background-image: url(/img/gradient/Background001\ \(372\).jpg);
-  /* background-size: 100% 100%; */
 }
 
-.the-fourth-section .btn-one {
+.the-fourth-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.the-fourth-text .btn-one {
   border-radius: 50px;
   background-color: #1f2937;
   color: white;
@@ -680,11 +677,11 @@ h1 {
   max-width: 40%;
 }
 
-.the-fourth-section-text h1 span {
+.the-fourth-text h1 span {
   color: #0ea472;
 }
 
-.the-fourth-section-text p {
+.the-fourth-text p {
   color: rgb(232, 237, 252);
   opacity: 0.8;
 }
@@ -815,6 +812,64 @@ p {
   transform: scale(1.1);
 }
 
+@media (max-width: 576px) {
+  .the-fourth-img-section {
+    display: none;
+  }
+
+  .the-fourth-section-text {
+    max-width: 90%;   /* mobilda kengligi ko‘p bo‘lsin */
+  }
+  
+  .the-fourth-text h1 {
+    font-size: 30px;  /* kichik ekran uchun H1 kichrayadi */
+  }
+
+  .the-fourth-text p {
+    font-size: 15px;  /* kichik ekran uchun P kichrayadi */
+    line-height: 1.2;
+  }
+
+  .the-fourth-text .btn-one {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+    /* Container gapni ozaytirish va padding qo'shish */
+    .the-fourth-section-containers {
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    
+    .the-fourth-section-box {
+      width: 120%;
+      padding: 8px;
+    }
+  
+   
+    .the-fourth-section-box-text {
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 5px;
+    }
+  
+    
+    .the-fourth-section-buttons {
+      display: flex;
+      flex-wrap: wrap;      
+      gap: 5px;
+    }
+  
+    .the-fourth-section-buttons button {
+      flex: 1 1 calc(50% - 5px); 
+      min-width: 100px;          
+      font-size: 14px;           
+      padding: 6px;
+    }
+  
+  }
+  
+  
 /* main */
 main {
   min-height: 100vh;
@@ -900,9 +955,8 @@ main p {
 }
 .main-start-btn:hover img {
   transform: translateY(-3px);
-
 }
- .main-start-btn {
+.main-start-btn {
   border: 1px solid #0ea472;
   background-color: #10b981;
 }
@@ -911,7 +965,6 @@ main p {
   color: white;
   text-decoration: none;
 }
-
 
 .main-boxes {
   display: flex;
@@ -957,7 +1010,6 @@ main p {
   border: 1px solid white;
 }
 
-
 footer {
   background-color: #000000;
   padding: 30px;
@@ -973,7 +1025,7 @@ footer {
 .footer-box-one a {
   text-decoration: underline;
 }
-.footer-box-one img{
+.footer-box-one img {
   width: auto;
   height: 80px;
 }
@@ -985,4 +1037,3 @@ footer {
 .footer-icons a {
   text-decoration: none;
 }
-
