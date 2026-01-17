@@ -9,6 +9,58 @@ html, body {
   overflow-x: hidden;
 }
 
+/* main va section */
+main,
+section,
+header {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+main.show,
+section.show,
+header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ichidagi text elementlar */
+header li,
+header ul,
+header img,
+main h1,
+main p,
+main button,
+main div,
+section h1,
+section p,
+section button,
+section div {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+header.show li,
+header.show ul,
+header.show img,
+main.show h1,
+main.show p,
+main.show button,
+main.show div,
+section.show h1,
+section.show p,
+section.show button,
+section.show div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
 @font-face {
   font-family: "bold-italic";
   src: url(/fonts/PT_Sans/PTSans-BoldItalic.ttf);
